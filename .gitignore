@@ -1,0 +1,9 @@
+# Uzum.uz dan olingan ma'lumotlar bu yerga saqlanadi
+uzum_data_*.csv
+model_*/
+*.pkl
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
