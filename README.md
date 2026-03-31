@@ -14,7 +14,7 @@
 - [Ishga tushirish](#-ishga-tushirish)
 - [Tizim Arxitekturasi](#-tizim-arxitekturasi)
 - [Natijalar](#-natijalar)
-- [Foydalanish](#-foydalanish)
+- [G'aroyib Kalkulyator](#-g'aroyib-kalkulyator)
 - [Litsenziya](#-litsenziya)
 
 ---
@@ -29,6 +29,7 @@
 | 📊 **9 ta kategoriya** | RAM, telefon, noutbuk va boshqalar |
 | 💾 **Model saqlash** | Har bir kategoriya uchun alohida model |
 | 🔄 **Interaktiv** | Nom yoki URL kiritib bashorat qilish |
+| 📜 **Tarix** | Barcha hisoblashlar saqlanadi |
 
 ---
 
@@ -74,8 +75,8 @@ pip install -r requirements.txt
 
 **Selenium (tavsiya etiladi):**
 ```bash
-# ChromeDriver avtomatik yuklanadi
 pip install selenium
+# ChromeDriver avtomatik yuklanadi
 ```
 
 **Playwright (alternativ):**
@@ -88,11 +89,19 @@ playwright install chromium
 
 ## 💻 Ishga tushirish
 
+### Narx bashorat:
+
 ```bash
 python uzum_price_predictor.py
 ```
 
-### Ish jarayoni:
+### Kalkulyator:
+
+```bash
+python calculator.py
+```
+
+### Ish jarayoni (Narx bashorat):
 
 1. **Kategoriyani tanlang** — raqam yoki nom bilan
 2. **Scraping usulini tanlang** — selenium, playwright, api, yoki auto
@@ -132,9 +141,7 @@ python uzum_price_predictor.py
 
 ---
 
-## 🎮 Foydalanish
-
-### Demo natija:
+## 🎮 Demo
 
 ![Demo](images/demo.png)
 
@@ -157,11 +164,38 @@ python uzum_price_predictor.py
 
 ---
 
+## 🧮 G'aroyib Kalkulyator
+
+![Calculator](images/calculator.png)
+
+Loyihada **ikkita** dastur mavjud:
+
+| Dastur | Fayl | Tavsif |
+|--------|------|--------|
+| **Narx Bashorat** | `uzum_price_predictor.py` | Uzum.uz'dan ma'lumot olib, narx bashorat qiladi |
+| **Kalkulyator** | `calculator.py` | Chiroyli GUI kalkulyator — basic + scientific |
+
+### Kalkulyator xususiyatlari:
+
+- ✅ **Basic mode** — oddiy hisoblash (+, −, ×, ÷)
+- 🔬 **Scientific mode** — sin, cos, tan, log, ln, √, x², π, e, faktorial
+- 📜 **Tarix** — barcha hisoblashlar saqlanadi
+- 💾 **Xotira** — MC, MR, M+, M−
+- ⌨️ **Klaviatura** — to'g'ridan-to'g'ri yozish mumkin
+- 🎨 **Chiroyli dizayn** — qorong'u tema
+
+```bash
+python calculator.py
+```
+
+---
+
 ## 📁 Loyiha tuzilishi
 
 ```
 uzum-price-predictor/
-├── uzum_price_predictor.py   # Asosiy kod
+├── uzum_price_predictor.py   # Narx bashorat (asosiy)
+├── calculator.py             # G'aroyib kalkulyator
 ├── requirements.txt          # Kutubxonalar
 ├── LICENSE                   # MIT License
 ├── .gitignore               # Git ignore
@@ -171,7 +205,8 @@ uzum-price-predictor/
     ├── categories.png
     ├── architecture.png
     ├── demo.png
-    └── performance.png
+    ├── performance.png
+    └── calculator.png
 ```
 
 ---
